@@ -1,0 +1,41 @@
+!pip install numpy
+!pip install pandas
+!pip install matplotlib
+!pip install seaborn
+!pip install pathlib
+!pip install datetime
+!pip install parse
+!pip install mlxtend --upgrade --no-deps
+!pip install xgboost
+!pip install pyswarm
+!pip install GPUtil
+
+#패키지 불러오기
+import numpy as np
+from numpy import mean
+import pandas as pd
+import argparse
+from parse import compile
+from pathlib import Path
+from datetime import date
+from datetime import datetime
+from sklearn.ensemble import IsolationForest
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import OneHotEncoder
+from mlxtend.frequent_patterns import fpgrowth
+import xgboost
+from xgboost import plot_importance
+import matplotlib as mpl
+import matplotlib.pyplot as plt
+import seaborn as sns
+import warnings
+from pyswarm import pso
+import GPUtil
+warnings.simplefilter("ignore")
+
+path='C:/Users/JSH/.jupyter/Dataset_생산공정 최적화 AI 데이터셋/data/raw_data.csv'
+df_raw=pd.read_csv(path)
+
+#데이터 불러오기
+print(df_raw.head())
+print(df_raw.info())
