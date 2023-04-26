@@ -1,0 +1,6 @@
+#데이터의 구성 확인
+print(df_raw.head())
+print(df_raw.info())
+
+#describe 함수를 통한 요약통계량 파악
+df_raw.describe()
